@@ -13,7 +13,7 @@ function update() {
     }
     ele.innerHTML = y;
     document.getElementById('in2').innerHTML=
-    document.getElementById('in1').value;
+    document.getElementById('in1').value.replace('abc', '123');
 }
 
 
