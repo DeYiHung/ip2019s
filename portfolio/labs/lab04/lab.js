@@ -1,26 +1,100 @@
+
+//從minN到maxN的隨機整數
+function getRandom(minN, maxN) {
+    return Math.floor( Math.random() * (maxN - minN + 1) ) + minN;
+}
+
+//從minNum到maxNum的不重複隨機數列
+function getRandomArray(minNum, maxNum, n) {
+    var rdmArray = [];
+    var rdm = 0;
+
+    for(var i = 0; i < n; i++) {
+        do {
+            var exist = false;
+            rdm = getRandom(minNum, maxNum);
+
+            if(rdmArray.indexOf(rdm) != -1) {
+                exist = true;
+            }
+        } while (exist);
+
+    rdmArray.push(rdm);
+    }
+return rdmArray;
+}
+
+
 $(function() {
-    var card = ['ace-of-spades.svg','ace-of-hearts.svg','ace-of-diamonds.svg','ace-of-club.svg'];
-    var arr=[1,1,1,1,2,2,2,2,3,3,3,3,0,0,0,0]
-    var newarr=[]
+    var cards = [ 'ace-of-club.svg',
+                  'ace-of-diamonds.svg',
+                  'ace-of-hearts.svg',
+                  'ace-of-spades.svg',
+                  'ace-of-club.svg',
+                  'ace-of-diamonds.svg',
+                  'ace-of-hearts.svg',
+                  'ace-of-spades.svg',
+                  'ace-of-club.svg',
+                  'ace-of-diamonds.svg',
+                  'ace-of-hearts.svg',
+                  'ace-of-spades.svg',
+                  'ace-of-club.svg',
+                  'ace-of-diamonds.svg',
+                  'ace-of-hearts.svg',
+                  'ace-of-spades.svg',
+                ];
 
-    for(var i=0;i<16;i++){
-        var random = Math.ceil(Math.random() * arr.length) - 1;
-        console.log(random)
-        newarr.push(arr[random]);
-        arr.splice(random,1)
-    }
-    for(var c=0;c<16;c++){
-        a=newarr[c]
-        $('#d2').append ( '<img class="issue" src="./'+card[a]+ '">');
-    }
-$('#b1').on('click',function(){
-    $('.issue').hide();
-    $('#d2').html('');
-    for(i=0;i<16;i++){
-        $('#d2').append('<img src="./joker-card.svg">');
-    }
-});
-});
+//發牌
+        rdmArray = getRandomArray(0, 15, 16);
+        for(j = 0; j < 16; j++) {
+            $('#img' + j).append('<img class = "issue_cards" type = "non_clickable" src = ' + cards[rdmArray[j]] + '>');
+        }
 
 
+//給class
+        $("img[src = 'ace-of-club.svg']").addClass('club');
+        $("img[src = 'ace-of-diamonds.svg']").addClass('diamonds');
+        $("img[src = 'ace-of-hearts.svg']").addClass('hearts');
+        $("img[src = 'ace-of-spades.svg']").addClass('spades');
 
+
+//按鈕蓋牌
+    $('#b1').on('click', function() {
+        $('td img').addClass('issue_cards');
+        $('.issue_cards').attr('type', "clickable");
+        $('.issue_cards').attr('src', 'joker-card.svg');
+        $('.issue_cards').removeClass('issue_cards');
+    })
+
+
+//翻牌
+
+    var flipCards = 0;
+
+    $('img').click(function() {
+        if ($(this).attr('type') == "clickable") {
+            var cardSuit = $(this).attr('class');
+            $(this).attr('src', 'ace-of-' + cardSuit + '.svg');
+            flipCards++;
+
+            if (flipCards == 2) {
+                var flipOne = $('[src*="ace"][type = "clickable"]').eq(0).attr('src');
+                var flipTwo = $('[src*="ace"][type = "clickable"]').eq(1).attr('src');
+
+                if (flipOne == flipTwo) {
+                    $('[src*="ace"][type = "clickable"]').animate({opacity: 0}, 400, function() {
+                        $('[src*= "ace"][type = "clickable"]').addClass('done').attr('type', 'non_clickable');
+                    });
+                }
+                else {
+                    setTimeout(function(){
+                        $('[src*= "ace"][type = "clickable"]').attr('src', 'joker-card.svg')
+                    }, 900);
+                }
+
+            flipCards = 0;
+            }
+        }
+    })
+
+})
