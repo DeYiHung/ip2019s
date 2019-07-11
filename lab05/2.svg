@@ -1,0 +1,59 @@
+
+<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0,0,512,512">
+
+  <rect width="512" height="512" stroke="red" fill="white"></rect>
+
+  <text x="2" y="12" font-size="12" text-anchor="start" fill="red">0</text>
+  <path d="M256  64 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="64" font-size="12" text-anchor="start" fill="red">64</text>
+  <path d="M256 128 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="128" font-size="12" text-anchor="start" fill="red">128</text>
+  <path d="M256 192 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="192" font-size="12" text-anchor="start" fill="red">192</text>
+  <path d="M256 256 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="256" font-size="12" text-anchor="start" fill="red">256</text>
+  <path d="M256 320 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="320" font-size="12" text-anchor="start" fill="red">320</text>
+  <path d="M256 384 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="384" font-size="12" text-anchor="start" fill="red">384</text>
+  <path d="M256 448 H0 H512" stroke="lightgray" fill="white"></path>
+  <text x="2" y="448" font-size="12" text-anchor="start" fill="red">448</text>
+  <text x="2" y="512" font-size="12" text-anchor="start" fill="red">512</text>
+
+  <path d="M64  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="64" y="12" font-size="12" text-anchor="start" fill="red">64</text>
+  <path d="M128  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="128" y="12" font-size="12" text-anchor="start" fill="red">128</text>
+  <path d="M195  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="192" y="12" font-size="12" text-anchor="start" fill="red">192</text>
+  <path d="M256  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="256" y="12" font-size="12" text-anchor="start" fill="red">256</text>
+  <path d="M320  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="320" y="12" font-size="12" text-anchor="start" fill="red">320</text>
+  <path d="M384  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="384" y="12" font-size="12" text-anchor="start" fill="red">384</text>
+  <path d="M448  0 V512" stroke="lightgray" fill="white"></path>
+  <text x="448" y="12" font-size="12" text-anchor="start" fill="red">448</text>
+  <text x="512" y="12" font-size="12" text-anchor="start" fill="red">512</text>
+
+<polygon fill="white" stroke="black" stroke-width="1" points="256,192 384,256 352,120"/>
+<polygon fill="white" stroke="black" stroke-width="1" points="256,192 128,280 160,120"/>
+<ellipse fill="white" stroke="black" stroke-width="1" cx="256" cy="300" rx="150" ry="130"/>
+<ellipse fill="black" stroke="black" stroke-width="1" cx="200" cy="290" rx="15" ry="30"/>
+<ellipse fill="black" stroke="black" stroke-width="1" cx="312" cy="290" rx="15" ry="30"/>
+<ellipse fill="yellow" stroke="black" stroke-width="1" cx="256" cy="350" rx="20" ry="12"/>
+<rect id="A" x="60" y="320" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<rect id="A" x="75" y="300" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<rect id="A" x="75" y="340" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<rect id="A" x="387" y="320" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<rect id="A" x="380" y="300" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<rect id="A" x="380" y="340" fill="#FF6CC4" stroke="#C30D23" stroke-width="3" width="65" height="5"/>
+<polygon fill="#FF4343" stroke="black" stroke-width="1" points="340,200 256,200 280,130"/>
+<polygon fill="#FF4343" stroke="black" stroke-width="1" points="340,200 400,260 425,180"/>
+<circle fill="#FF4343" stroke="#890000" stroke-width="5" cx="340" cy="200" r="25"/>
+
+
+
+
+
+</svg>
